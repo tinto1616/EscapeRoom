@@ -1,34 +1,11 @@
 import { MapPin, Search } from "lucide-react";
+import Header from "./components/Header/Header.jsx";
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden">
-      {/* HEADER */}
-      <header className="w-full bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-4 md:px-8 py-4">
-          <div className="flex items-center space-x-2">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/483/483947.png"
-              alt="Logo"
-              className="w-8 h-8"
-            />
-            <h1 className="font-bold text-xl text-orange-600">Escape the Hell</h1>
-          </div>
+      <Header />
 
-          <nav className="hidden md:flex space-x-6 font-medium text-gray-700">
-            <a href="#" className="hover:text-orange-500 transition">Home</a>
-            <a href="#" className="hover:text-orange-500 transition">Thema’s</a>
-            <a href="#" className="hover:text-orange-500 transition">Boek nu</a>
-            <a href="#" className="hover:text-orange-500 transition">Contact</a>
-          </nav>
-
-          <button className="md:hidden text-gray-700 hover:text-orange-500">
-            <Search className="w-5 h-5" />
-          </button>
-        </div>
-      </header>
-
-      {/* HERO SECTION */}
       <section
         className="relative flex flex-col justify-center items-center text-center text-white px-6 py-24 md:py-40"
         style={{
