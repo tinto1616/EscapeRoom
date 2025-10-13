@@ -4,40 +4,27 @@ import Header from "./components/Header/Header.jsx";
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden">
-      <Header />
-
-      <section
-        className="relative flex flex-col justify-center items-center text-center text-white px-6 py-24 md:py-40"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-            Ontsnap uit de hel als je durft 🔥
-          </h2>
-          <p className="text-base md:text-lg text-gray-200 mb-10">
-            Werk samen, los raadsels op en vind de uitgang voordat de tijd om is.
-            Een unieke escaperoomervaring vol spanning en mysterie.
-          </p>
-
-          {/* ZOEKVELD */}
-          <div className="bg-white rounded-full flex items-center shadow-lg overflow-hidden max-w-md mx-auto w-full">
-            <input
-              type="text"
-              placeholder="Zoek op plaats of thema..."
-              className="flex-1 px-5 py-3 text-gray-800 focus:outline-none text-sm md:text-base"
-            />
-            <button className="bg-orange-500 hover:bg-orange-400 p-3 md:p-4 rounded-full text-white mr-2 transition">
-              <Search className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+      {/* HEADER */}
+      <header className="w-full bg-white shadow-sm sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-4 md:px-8 py-4">
+          <div className="flex items-center space-x-2">
+            <h1 className="font-bold text-xl text-orange-600">Escape the Hell</h1>
           </div>
+
+          <nav className="hidden md:flex md:flex-row md:items-center md:justify-center space-x-6 font-medium text-gray-700 ">
+            <Link to="/map" className="hover:text-orange-500 transition">Map</Link>
+              <Link to="/scan" className="hover:text-orange-500 transition">Scannen</Link>
+            <Link to="/leaderboard" className="hover:text-orange-500 transition">Leaderboard</Link>
+            <Link to="/login" className="text-orange-500 outline outline-orange-500 hover:text-white hover:bg-orange-500 p-2 rounded-full transition">Login</Link>
+          </nav>
+
+          <button className="md:hidden text-gray-700 hover:text-orange-500">
+            <Search className="w-5 h-5" />
+          </button>
         </div>
-      </section>
+      </header>
+
+
 
       {/* KAART + INFO */}
       <section className="w-full bg-gray-50 py-16 px-6 md:px-12">
