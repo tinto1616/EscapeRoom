@@ -1,31 +1,12 @@
 import { MapPin, Search } from "lucide-react";
 import Header from "./components/Header/Header.jsx";
+import { Link } from "react-router";
+import Footer from "./components/Footer/footer.jsx";
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden">
-      {/* HEADER */}
-      <header className="w-full bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-4 md:px-8 py-4">
-          <div className="flex items-center space-x-2">
-            <h1 className="font-bold text-xl text-orange-600">Escape the Hell</h1>
-          </div>
-
-          <nav className="hidden md:flex md:flex-row md:items-center md:justify-center space-x-6 font-medium text-gray-700 ">
-            <Link to="/map" className="hover:text-orange-500 transition">Map</Link>
-              <Link to="/scan" className="hover:text-orange-500 transition">Scannen</Link>
-            <Link to="/leaderboard" className="hover:text-orange-500 transition">Leaderboard</Link>
-            <Link to="/login" className="text-orange-500 outline outline-orange-500 hover:text-white hover:bg-orange-500 p-2 rounded-full transition">Login</Link>
-          </nav>
-
-          <button className="md:hidden text-gray-700 hover:text-orange-500">
-            <Search className="w-5 h-5" />
-          </button>
-        </div>
-      </header>
-
-
-
+      <Header />
       {/* KAART + INFO */}
       <section className="w-full bg-gray-50 py-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
@@ -60,11 +41,7 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="text-center py-8 bg-gray-900 text-gray-400 text-sm">
-        © 2025 Escape the Hell — Dare to Escape?
-      </footer>
+      <Footer />
     </div>
   );
 }
